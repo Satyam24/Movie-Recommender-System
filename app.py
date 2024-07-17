@@ -26,10 +26,10 @@ def recommend(movie):
     return recommended_movies,recommended_movies_poster
 
 
-movies_dict = pd.read_pickle('movies.pkl', 'rb')
+movies_dict = pd.read_pickle('movies.pkl', compression='infer')
 movies = pd.DataFrame(movies_dict)
 
-similarity = pd.read_pickle('similarity.pkl', 'rb')
+similarity = pd.read_pickle('similarity.pkl', compression='infer')
 
 st.title("Movie Recommender System")
 
